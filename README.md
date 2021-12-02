@@ -11,7 +11,7 @@ Este programa encenderá un led cuando el iman se separe del interruptor indican
 cerrado.
 
 ```python
-    def callbackBotonPulsado1 (canal):
+    def comportamintopuerta (canal):
     global flag1
     if flag1 == 0:
         pwm.ChangeDutyCycle(100)
@@ -35,6 +35,6 @@ cerrado.
    ledRojo=21
 ```
 
-Si quieres ver un video de demostracion del ej1, pulsa [aqui](https://drive.google.com/file/d/1cDLSdudxqsnL4s5az-hANzkDzSYxUYtO/view?usp=sharing).
+Si quieres ver un video de demostracion del programa, pulsa [aqui](https://drive.google.com/file/d/1cDLSdudxqsnL4s5az-hANzkDzSYxUYtO/view?usp=sharing).
 
 Para cualquier duda: <a.cobo.2020@alumos.urjc.es>

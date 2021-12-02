@@ -17,7 +17,7 @@ def callbackSalir (senial, cuadro): # señal y estado cuando se produjo la inter
     GPIO.cleanup () # limpieza de los recursos GPIO antes de salir
     sys.exit(0)
 
-def callbackBotonPulsado1 (canal):
+def comportamientopuerta (canal):
     global flag1
     if flag1 == 0:
         pwm.ChangeDutyCycle(100)
@@ -39,7 +39,7 @@ if __name__ == '__main__':
     pwm.start (100)
 
     hilo1 = threading.Thread(target=GPIO.add_event_detect(sensorPuerta, GPIO.BOTH,
-      callback=callbackBotonPulsado1, bouncetime=200))
+      callback=comportamientopuerta, bouncetime=200))
     hilo1.start()
 
     hilo1.join()
